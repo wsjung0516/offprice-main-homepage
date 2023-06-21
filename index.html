@@ -17,7 +17,7 @@
           <div>
             <video class="h-72" controls="">
               <source
-                src="https://wsjung0516.s3.us-west-1.amazonaws.com/homepage/offprice-main-homepage-2013-06-20.mp4"
+                src="https://wsjung0516.s3.us-west-1.amazonaws.com/homepage/offprice-main-homepage-2013-06-21.mp4"
                 type="video/mp4"
               />
             </video>
@@ -32,20 +32,38 @@
               >Source</a
             >
           </p>
+          <p>Kubernetes yaml program</p>
+          <p>
+            Program source : With the security of the program, the source is not
+            open to the public. Please contact me if you want to see the source.
+          </p>
+
           <hr class="my-8 h-px bg-gray-400 border-0 dark:bg-gray-700" />
           <p class="text-2xl mt-8">Summary</p>
-          <p> This program is a website for clothing closeout sales. It enables
+          <p>
+            This program is a website for clothing closeout sales. It enables
             sellers to sell their inventory in bulk quantities. Wholesale or
-            retail businesses can use this website to select and purchase
-            items. The program allows users to store selected items in a
-            separate cart and initiate transactions with the sellers by
+            closeout sales businesses can use this website to select and
+            purchase items. The program allows users to store selected items in
+            a separate cart and initiate transactions with the sellers by
             verifying the seller's information provided with the product. The
-            program focuses on the following considerations: </p>
+            program focuses on the following considerations:
+          </p>
           <ul class="list-decimal ml-6">
-            <li>Fast search: Ensuring users can quickly find their desired items among a large number of products. </li>
-            <li>Easy product registration for sellers: Designing a user-friendly interface for product registration without the need for extensive instructions. </li>
-            <li>Responsive mode: Applying responsive design to enable easy product registration and browsing on any hardware device. It particularly allows direct
-              photo uploads from mobile devices. </li>
+            <li>
+              Fast search: Ensuring users can quickly find their desired items
+              among a large number of products.
+            </li>
+            <li>
+              Easy product registration for sellers: Designing a user-friendly
+              interface for product registration without the need for extensive
+              instructions.
+            </li>
+            <li>
+              Responsive mode: Applying responsive design to enable easy product
+              registration and browsing on any hardware device. It particularly
+              allows direct photo uploads from mobile devices.
+            </li>
           </ul>
           <br />
           <ol class="text-xl list-decimal ml-6"></ol>
@@ -63,54 +81,84 @@
             <li>ArgoCD: 2.7.1</li>
             <li>Firebase:</li>
           </ol>
+          <ol>
+            <li>
+              Reasons for development:
+              <ol>
+                <li>
+                  Started developing the website due to the recommendation of an
+                  acquaintance, as there are many sellers with a large inventory
+                  in the LA jobber market. The goal was to create a website for
+                  these sellers to sell closeout products.
+                </li>
+                <li>
+                  Initially, thorough market research was necessary, but there
+                  was a lack of information on wholesale and closeout sales.
+                  Therefore, the design relied on the experience of some
+                  small-scale traders.
+                </li>
+                <li>
+                  The focus of development was to create a system that is easy
+                  for sellers to use, rather than prioritizing the buyer's
+                  perspective. However, there were limitations in obtaining
+                  sufficient information for this aspect.
+                </li>
+                <li>
+                  Therefore, the development was initially based on strategic
+                  considerations.
+                </li>
+                <li>
+                  To commercialize the website, advertising and additional
+                  development plans would be necessary. However, due to the lack
+                  of resources to compete with existing competitors large company such as
+                  "Faire" and "Fashion-Go", the development was temporarily halted.
+                </li>
+              </ol>
+            </li>
+            <li>Development period: 3.5 months (2023-03-01 to 2023-06-15)</li>
+            <li>
+              Technologies applied in development:
+              <ol>
+                <li>
+                  Angular: Developed using the latest version, incorporating
+                  both standalone and SSR (Server Side Rendering) capabilities.
+                </li>
+                <li>
+                  Nestjs: Chosen as the back-end technology due to its
+                  similarities with Angular in terms of structure, making it
+                  easy to apply for those familiar with Angular. It is also
+                  highly scalable and suitable for large-scale projects.
+                </li>
+                <li>
+                  Prisma: Applied as an ORM (Object Relational Model)
+                  technology, which is easier to implement compared to TypeORM
+                  and provides fast performance.
+                </li>
+                <li>
+                  Docker: Containerized the front-end and back-end programs.
+                </li>
+                <li>
+                  Kubernetes: Utilized for simplified deployment of the
+                  containerized front-end and back-end programs, enabling easy
+                  application of CI/CD, continuous monitoring, and self-healing
+                  capabilities for stable operations. Ingress and reverse proxy
+                  were implemented for Nestjs and Angular.
+                </li>
+                <li>
+                  MySQL: Google Cloud SQL was used for stable data backup,
+                  monitoring, and automatic scaling.
+                </li>
+                <li>Firebase: Implemented for user authentication purposes.</li>
+              </ol>
+            </li>
+          </ol>
+
           <hr class="my-8 h-px bg-gray-400 border-0 dark:bg-gray-700" />
           <p class="text-2xl mt-8">Basic structure</p>
           <div class="mt-4">
             <!-- <img src="assets/images/pizza-structure.png" width="500"/> -->
           </div>
           <ol class="list-decimal ml-6 mt-3">
-            <p>Below seq. no is related with above diagram.</p>
-            <br />
-            <li>Main screen, Program to display made pizzas</li>
-            <li>Structure for each pizza</li>
-            <li>Programs related to pizza toppings</li>
-            <li>
-              A program that selects pizza toppings and displays the overlay
-              process for the selected toppings
-            </li>
-          </ol>
-          <hr class="my-8 h-px bg-gray-400 border-0 dark:bg-gray-700" />
-          <p class="text-2xl mt-5">Description of Program Source</p>
-          <br />
-          <ol class="text-xl list-disc ml-6">
-            <li>
-              pizza-display ; A component that animates toppings on pizza dough.
-            </li>
-            <li>
-              pizza-form: A component that creates, adds, or deletes pizzas, or
-              selects and saves toppings.
-            </li>
-            <li>
-              pizza-item: A component that displays pizza on the dashboard (home
-              menu).
-            </li>
-            <li>
-              pizza-toppings: Ability to choose toppings for pizza. Delivers the
-              selected result to pizza-form component
-            </li>
-            <li>
-              Selected-item: A component that displays the selected topping and
-              calculates a price that fluctuates whenever a topping is added or
-              removed.
-            </li>
-            <li>
-              product-item.componet: Components that display separately if you
-              select a pizza listed on the dashboard.
-            </li>
-            <li>
-              product.component: The part that lists the created pizza on the
-              dashboard (home menu)
-            </li>
           </ol>
         </div>
       </div>
